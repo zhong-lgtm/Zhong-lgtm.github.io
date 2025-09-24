@@ -8,3 +8,136 @@
   <h1>Hello</h1>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidget Fun - Relax • Focus • Play</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🎯 Fidget Fun</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero fade-in">
+            <h1>Fidget Fun</h1>
+            <p class="subtitle">Relax • Focus • Play</p>
+            <p style="color: #f0f0f0; font-size: 1.1rem; margin-bottom: 2rem;">
+                Discover the perfect fidget toys to help you stay calm, focused, and creative!
+            </p>
+            <a href="products.html" class="cta-button bounce">Explore Our Products</a>
+        </section>
+
+        <!-- Welcome Section -->
+        <section class="content-section fade-in">
+            <h2>Welcome to Fidget Fun! 🎉</h2>
+            <p>
+                Step into a world where stress melts away and focus comes naturally! Our carefully curated collection 
+                of fidget toys is designed to bring joy, calm, and creativity to your daily life.
+            </p>
+            <p>
+                Whether you're looking to reduce anxiety, improve concentration, or simply have fun, we have the 
+                perfect fidget companion waiting for you. From classic spinners to satisfying pop-its, each toy 
+                is chosen for its quality and ability to bring a smile to your face.
+            </p>
+        </section>
+
+        <!-- Benefits Grid -->
+        <section class="benefits-grid fade-in">
+            <div class="benefit-card">
+                <div class="icon">😌</div>
+                <h3>Stress Relief</h3>
+                <p>Melt away tension and anxiety with soothing, repetitive motions that calm your mind.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="icon">🎯</div>
+                <h3>Enhanced Focus</h3>
+                <p>Channel nervous energy into productive focus, perfect for work, study, or creative tasks.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="icon">🎨</div>
+                <h3>Creative Play</h3>
+                <p>Unlock your imagination and discover new ways to play, explore, and express yourself.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="icon">🤝</div>
+                <h3>Social Connection</h3>
+                <p>Share the fun with friends and family - fidget toys make great conversation starters!</p>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="content-section fade-in" style="text-align: center;">
+            <h2>Ready to Start Your Fidget Journey?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Join thousands of happy customers who have discovered the joy of fidgeting!
+            </p>
+            <a href="about.html" class="cta-button" style="margin-right: 1rem;">Learn More</a>
+            <a href="products.html" class="cta-button">Shop Now</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ for fidget fans everywhere.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+lllll
