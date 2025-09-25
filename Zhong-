@@ -1,0 +1,18 @@
+andreatang@Mac Zhong-lgtm.github.io-main 2 % python3 -m http.server 8080
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+andreatang@Mac Zhong-lgtm.github.io-main 2 % python -m Simple
+HTTPServer 8080
+zsh: command not found: python
+andreatang@Mac Zhong-lgtm.github.io-main 2 %    
+andreatang@Mac Zhong-lgtm.github.io-main 2 % which node
+node not found
+andreatang@Mac Zhong-lgtm.github.io-main 2 % php -S localhost
+:8080
+zsh: command not found: php
+andreatang@Mac Zhong-lgtm.github.io-main 
+andreatang@Mac Zhong-lgtm.github.io-main 
+andreatang@Mac Zhong-lgtm.github.io-main 2 % 
+andreatang@Mac Zhong-lgtm.github.io-main 2 % mkdir -p images
+andreatang@Mac Zhong-lgtm.github.io-main 2 % 
